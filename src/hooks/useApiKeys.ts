@@ -8,7 +8,7 @@ export const useApiKeys = () => {
   useEffect(() => {
     // Load API keys from localStorage
     const savedGithubToken = localStorage.getItem('devintel_github_token');
-    const savedOpenaiKey = localStorage.getItem('devinel_openai_key');
+    const savedOpenaiKey = localStorage.getItem('devintel_openai_key');
 
     if (savedGithubToken && savedOpenaiKey) {
       setGithubToken(savedGithubToken);
@@ -18,16 +18,16 @@ export const useApiKeys = () => {
   }, []);
 
   const saveApiKeys = (github: string, openai: string) => {
-    localStorage.setItem('devitel_github_token', github);
-    localStorage.setItem('devinel_openai_key', openai);
+    localStorage.setItem('devintel_github_token', github);
+    localStorage.setItem('devintel_openai_key', openai);
     setGithubToken(github);
     setOpenaiKey(openai);
     setIsConfigured(true);
   };
 
   const clearApiKeys = () => {
-    localStorage.removeItem('devitel_github_token');
-    localStorage.removeItem('devinel_openai_key');
+    localStorage.removeItem('devintel_github_token');
+    localStorage.removeItem('devintel_openai_key');
     setGithubToken('');
     setOpenaiKey('');
     setIsConfigured(false);

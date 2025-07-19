@@ -95,14 +95,14 @@ const Repositories = () => {
       });
       
       // Store summary in localStorage for now
-      const summaries = JSON.parse(localStorage.getItem('devitel_summaries') || '[]');
+      const summaries = JSON.parse(localStorage.getItem('devintel_summaries') || '[]');
       summaries.push({
         id: Date.now(),
         repoName: repo.fullName,
         content: summary,
         createdAt: new Date().toISOString(),
       });
-      localStorage.setItem('devitel_summaries', JSON.stringify(summaries));
+      localStorage.setItem('devintel_summaries', JSON.stringify(summaries));
       
       toast({
         title: "Summary generated",
